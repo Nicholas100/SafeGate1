@@ -1,0 +1,23 @@
+#include <DHT.h>
+#include <DHT_U.h>
+
+//Programa de controle ao motor.
+ int readBluetooth;//Variável que irá receber o valor enviado do celular para o bluetooth
+ int motor_a=6;
+ int motor_b=3;
+ 
+ void setup() {
+ Serial.begin(9600);
+ pinMode(motor_a,OUTPUT);
+}
+void loop() {
+ if(Serial.available()){
+ readBluetooth = Serial.read();//Valor lido na Serial será guardado na variável readBluetooth
+ if(readBluetooth == 'a'){
+  }
+ if(readBluetooth == 'a'){
+ digitalWrite(motor_a,HIGH); 
+  }
+  if(readBluetooth == 'b'){
+  digitalWrite(motor_b,LOW);
+    }
